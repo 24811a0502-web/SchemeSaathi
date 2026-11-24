@@ -3,6 +3,8 @@ import "./globals.css";
 import { AuthProvider } from "@/contexts/AuthContext";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: "SchemeSaathi – Government Scheme Assistant",
   description: "Your Personal Government Scheme Assistant powered by AI",

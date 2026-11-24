@@ -16,8 +16,6 @@ dist/
 downloads/
 eggs/
 .eggs/
-lib/
-lib64/
 parts/
 sdist/
 var/
@@ -31,6 +29,12 @@ env/
 ENV/
 backend/venv/
 backend/.venv/
+backend/lib/
+backend/lib64/
+
+# Whitelist application source lib directory
+!frontend/src/lib/
+!frontend/src/lib/**
 
 # Environment Variables & Secrets (CRITICAL: NEVER COMMIT KEYS)
 .env
@@ -43,6 +47,11 @@ backend/.env
 frontend/.env.local
 *.pem
 *.key
+
+# Whitelist template files
+!.env.example
+!backend/.env.example
+!frontend/.env.example
 
 # Next.js
 .next/
@@ -74,3 +83,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+
+# Scratch verification scripts
+verify_imports.py
+verify_tracked.py
